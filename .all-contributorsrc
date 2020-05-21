@@ -1,0 +1,152 @@
+{
+  "files": [
+    "AUTHORS.md",
+    "README.md"
+  ],
+  "imageSize": 100,
+  "contributorsPerLine": 7,
+  "contributorsSortAlphabetically": true,
+  "commit": false,
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "rochacbruno",
+      "name": "Bruno Rocha",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/458654?v=4",
+      "profile": "http://brunorocha.org",
+      "contributions": [
+        "code",
+        "video",
+        "ideas",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "mtrsk",
+      "name": "Marcos Benevides",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/16356569?v=4",
+      "profile": "https://mtrsk.gitlab.io/",
+      "contributions": [
+        "code",
+        "review",
+        "test",
+        "infra",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "fabricio-aguiar",
+      "name": "Fabricio Aguiar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17153022?v=4",
+      "profile": "https://fabricio-aguiar.github.io/",
+      "contributions": [
+        "review",
+        "code"
+      ]
+    },
+    {
+      "login": "jairomr",
+      "name": "Jairo Matos Da Rocha",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7321240?v=4",
+      "profile": "http://jairomr.com.br",
+      "contributions": [
+        "code",
+        "doc",
+        "review"
+      ]
+    },
+    {
+      "login": "ddauriol",
+      "name": "Douglas Maciel d'Auriol Souza",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/44655942?v=4",
+      "profile": "https://github.com/ddauriol",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "marcosf63",
+      "name": "Marcos Oliveira",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4137898?v=4",
+      "profile": "https://github.com/marcosf63",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dunossauro",
+      "name": "Eduardo Mendes",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6801122?v=4",
+      "profile": "http://youtube.com/c/eduardomendes",
+      "contributions": [
+        "tutorial",
+        "video",
+        "code",
+        "review"
+      ]
+    },
+    {
+      "login": "rtomkiel",
+      "name": "Regis Tomkiel",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15989303?v=4",
+      "profile": "https://blog.doseextra.com",
+      "contributions": [
+        "code",
+        "example"
+      ]
+    },
+    {
+      "login": "MarcusMann",
+      "name": "Marcus Pereira",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9499562?v=4",
+      "profile": "http://spacedevs.com.br",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "devgiordane",
+      "name": "Giordane Oliveira",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7908354?v=4",
+      "profile": "https://devgiordane.com",
+      "contributions": [
+        "design",
+        "ideas"
+      ]
+    },
+    {
+      "login": "Pbezerra-dev",
+      "name": "Herbety Paulo",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/51804133?v=4",
+      "profile": "https://www.linkedin.com/in/herbety-paulo-aa9a2b186/",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "riverfount",
+      "name": "Vicente Marçal",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/26264782?v=4",
+      "profile": "http://www.vicentemarcal.unir.br",
+      "contributions": [
+        "review",
+        "doc"
+      ]
+    },
+    {
+      "login": "walison17",
+      "name": "Walison Filipe",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/14242043?v=4",
+      "profile": "https://github.com/walison17",
+      "contributions": [
+        "ideas"
+      ]
+    }
+  ],
+  "projectName": "flaskextensions.com",
+  "projectOwner": "flask-extensions",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}

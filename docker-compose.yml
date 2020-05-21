@@ -1,3 +1,4 @@
+---
 version: "3"
 
 volumes:
@@ -5,19 +6,52 @@ volumes:
 
 services:
 
-  fexservice:
-    build: .
+  fexapi:
+    build: 
+      context: .
+      dockerfile: ./docker/api/Dockerfile
     restart: always
     depends_on:
       - "db"
+    env_file:
+      - '.variables.env'
+    volumes:
+      - ./fexapi:/fexapi
+    ports:
+      - "8000:8000"
+
+  fexservice:
+    build: 
+      context: .
+      dockerfile: ./docker/service/Dockerfile
+    restart: always
+    depends_on:
+      - "db"
+    env_file:
+      - '.variables.env'
+    volumes:
+      - ./fexservice:/fexservice
+
+  fexui:
+    build:
+      context: .
+      dockerfile: ./docker/ui/Dockerfile
+    restart: always
+    environment:
+      - PORT=5500
+    depends_on:
+      - "fexapi"
+    volumes:
+      - ./fexui:/fexui
+    ports:
+      - "5500:5500"
 
   db:
     image: postgres:12.1
     restart: always
-    environment:
-      - POSTGRES_USER=fexservice
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=fexservice
+    env_file:
+      - '.variables.env'
     volumes:
       - data:/var/lib/postgresql/data
-
+    ports:
+      - "5432:5432"

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flask Extensions</title>
+  <link rel="stylesheet" href="/css/bulma.css" />
+  <link rel="stylesheet" href="/css/custom.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body class="site">
+  <main class="site-container" id="app">
+    <section class="hero is-info is-bold">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <img src="/img/logo.png" alt="Logo">
+              </a>
+              <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item" href="/about.html">
+                  about
+                </a>
+                <span class="navbar-item">
+                  <a class="button is-info is-inverted" href="https://github.com/flask-extensions/flaskextensions.com" target="_blank">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>source code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-spaced has-text-black">Find the Flask extension you need for your Python project.</h1>
+          <h2 class="subtitle has-text-black">Add <a href="https://github.com/topics/flask-extension" target="_blank"><em>flask-extension</em></a> topic to a repository to get it listed</h2>
+          <h4 class="has-text-grey-lighter">Rank is calculated based on stars + last update + number of contributors</h4>
+          <div class="columns is-centered" id="search-form">
+            <div class="column is-8-desktop is-12-mobile">
+              <div class="field has-addons">
+                <input type="search" placeholder="Search extensions e.g: login" class="input is-large" v-model="term"
+                  v-on:keyup.enter="search">
+              </div>
+            </div>
+            <div class="column is-full-mobile is-2-desktop">
+              <div class="field has-addons">
+                <button class="is-primary is-outlined button is-large is-inverted" @click="search">SEARCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section has-background-grey-darker top-status">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-expanded has-text-white">
+            <p class="is-size-4">Total Results: {{result.page.total}} </p>
+          </div>
+          <!-- <div class="column is-3">
+            <div class="select is-fullwidth">
+              <select name="" id="">
+                <option value="">Topics</option>
+                <option value="">Topics</option>
+                <option value="">Topics</option>
+                <option value="">Topics</option>
+              </select>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section has-background-light">
+      <div class="container">
+        <div class="columns filters">
+          <div class="column">
+            <div class="columns is-multiline">
+              <div class="column is-one-quarter" v-for="extension in result.items" :key="extension.id">
+                <div class="card">
+                  <header class="card-header">
+                    <p class="card-header-title">
+                      {{ extension.name }}
+                    </p>
+                  </header>
+                  <div class="card-content">
+                    <div class="content">
+                      {{ extension.description | truncate }}
+                    </div>
+                  </div>
+                  <footer class="card-footer">
+                    <a :href="extension.html_url" target="_blank" class="card-footer-item has-icons-left">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>                  
+                      Github
+                    </a>
+                    <a :href="`https://stackoverflow.com/search?q=flask+${extension.name}`" target="_blank" class="card-footer-item has-icons-left">
+                      <span class="icon">
+                        <i class="fab fa-stack-overflow"></i>
+                      </span>                  
+                      Discussion
+                    </a>
+                    <!-- <a href="#" class="card-footer-item has-icons-left">
+                      <span class="icon">
+                        <i class="fas fa-file"></i>
+                      </span>                  
+                      docs
+                    </a> -->
+
+                  </footer>
+                </div>
+              </div>
+
+              <div class="column is-full">
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                  <a class="pagination-previous" :disabled="!result.page.previous"
+                    @click="paginate(result.page.previous)">Previous</a>
+                  <a class="pagination-next" :disabled="!result.page.next" @click="paginate(result.page.next)">Next
+                    page</a>
+
+                  <ul class="pagination-list">
+                    <li>Page {{ result.page.page}} / {{result.page.total}}</li>
+                  </ul>
+                </nav>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="section">
+      <p class="has-text-centered">Flask Extensions - Made with ❤️ and 🍺 online at <a href="http://twitch.tv/codeshow">CodeShow</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/js/main.js"></script>
+
+</body>
+
+</html>
